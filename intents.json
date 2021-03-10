@@ -1,0 +1,35 @@
+{
+	"intent": "find_calories",
+
+	"data": [
+		"how many calories are in 1 glass of milk?",
+		"calories in two apples",
+		"caloric content of a loaf of white bread"
+	],
+
+  "required_entities": ["quantity", "unit", "ingredient"],
+	"entities": [
+		{
+			"quantity": "1",
+			"unit": "glass",
+			"ingredient": "milk"
+		},
+		{
+			"quantity": "2",
+			"unit": "count",
+			"ingredient": "apple"
+		},
+		{
+			"quantity": "1",
+			"unit": "loaf",
+			"ingredient": "bread"
+		}
+  ],
+
+  "response_template": "{quantity} {unit} of {ingredient} has {calories} calories, {fat}g of fat, {protein}g of protein, and {carbohydrates}g of carbohydrates",
+	"responses": [
+		"1 glass of milk has 103 calories, 2.4g of fat, 8g of protein, and 12g of carbohydrates",
+		"2 apples have 190 calories, 0.6g of fat, 1g of protein, and 50g of carbohydrates",
+		"1 loaf of white bread has 67 calories, 1g of fat, 2g of protein, and 13g of carbohydrates"
+	]
+}
